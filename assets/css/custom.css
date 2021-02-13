@@ -1,0 +1,143 @@
+.sidebar-fixed{
+    padding:0 .3rem .3rem !important
+}
+.btn-rounded {
+    border-radius: 100% !important;
+    padding: .5rem .7rem !important;
+}
+.star-cb-group {
+    /* remove inline-block whitespace */
+    font-size: 0;
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    /* the hidden clearer */
+  }
+  .star-cb-group * {
+    font-size: 2rem;
+  }
+  .star-cb-group > input {
+    display: none;
+  }
+  .star-cb-group > input + label {
+    /* only enough room for the star */
+    display: inline-block;
+    overflow: hidden;
+    width: 1em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .star-cb-group > input + label:before {
+    text-indent: -9999px;
+    content: "☆";
+    color: #888;
+  }
+  .star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+    content: "★";
+    color: #e52;
+    text-shadow: 0 0 1px #333;
+  }
+  
+  .star-cb-group:hover > input + label:before {
+    content: "☆";
+    color: #888;
+    text-shadow: none;
+  }
+  .star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+    content: "★";
+    color: #e52;
+    text-shadow: 0 0 1px #333;
+  }
+  .star-cb-group >   label.star-cb-clear {
+    text-indent: 1em;
+    width: 1em;
+    margin-left: -1em;
+  }
+  .star-cb-group >  label.star-cb-clear :before {
+    width: 1em;
+  }
+  .col-md-12.question-text {
+      text-indent: 2em;
+  }
+  .col-md-12.question-text:before {
+    content: "☰";
+    position: absolute;
+    left: -1.5em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+  .rating-field {
+    text-align: center;
+}
+#load_modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+#load_modal .card{
+    margin:auto
+}
+.question-item {
+    position: relative;
+}
+a.btn.btn-danger.btn-sm.remove-field.waves-effect.waves-light {
+    position: absolute;
+    right: 0;
+    z-index:10
+}
+.ui-state-default.question-item-row {
+    padding: 1em;
+    background: #dfe5ff;
+}
+main#login-main{
+  position:fixed;
+  height:100%;
+  width:100%;
+  padding:1em
+}
+
+.card .view.view-cascade.gradient-card-header.blue-gradient {
+  position: relative;
+  top: -.7em;
+}
+#login-progress{
+  height:.3em;
+  display: none;
+}
+nav.navbar.fixed-top.navbar-expand-lg.navbar-light.white.scrolling-navbar {
+  padding-left: 280px;
+}
+nav.navbar.fixed-top.navbar-expand-lg.navbar-light.white.scrolling-navbar .user_logout {
+  position:relative;
+  right:2em;
+  font-weight: bolder;
+}
+.btn{
+  text-transform:inherit
+}
+.sidebar-fixed {
+  z-index: 1040;
+  height: calc(100%);
+  overflow: auto;
+}
+footer.page-footer.text-center.font-small.primary-color-dark.darken-2.mt-4.wow.fadeIn {
+    position: fixed;
+    width: calc(100%);
+    bottom: 0;
+}
+.dash-sum-icon{
+  font-size: 3rem;
+  position: absolute;
+  color: #6b6b6b;
+  top: 29px;
+}
+
+main {
+    margin-bottom: 4rem;
+}

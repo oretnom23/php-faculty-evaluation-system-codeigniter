@@ -1,0 +1,36 @@
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)(\.gz)?$">
+  Header set Expires "Thu, 15 Apr 2020 20:00:00 GMT"
+</FilesMatch>
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+</IfModule>
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php?/$0 [PT,L]
+
+##<FilesMatch "\.(php)$">
+#   <IfModule mod_headers.c>   
+#     Header set Access-Control-Allow-Origin "*"
+#   </IfModule>
+#</FilesMatch>
+
+
+php_flag  display_startup_errors on
+php_flag  display_errors on
+php_flag  html_errors on
+php_value max_input_vars 10000
+php_value memory_limit 4G
+php_value max_execution_time 36000
+
+
+AddType text/cache-manifest .appcache
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+ </FilesMatch>
+</IfModule>

@@ -1,0 +1,85 @@
+.sidebar-fixed {
+  height: 100vh;
+  width: 270px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1050;
+  background-color: #fff;
+  padding: 1.5rem;
+  padding-top: 0; }
+  .sidebar-fixed .list-group .active {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  .sidebar-fixed .logo-wrapper {
+    padding: 2.5rem; }
+    .sidebar-fixed .logo-wrapper img {
+      max-height: 50px; }
+
+@media (min-width: 1200px) {
+  .navbar,
+  .page-footer,
+  main {
+    padding-left: 270px; } }
+
+@media (max-width: 1199.98px) {
+  .sidebar-fixed {
+    display: none; } }
+
+    .star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 2rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: 1em;
+  width: 1em;
+  margin-left: -1em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: 1em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.col-md-12.question-text {
+    text-decoration: dotted;
+    display: list-item;
+    text-indent: 2em;
+}
+
